@@ -6,8 +6,7 @@ export default Ember.Route.extend({
       id: 'Barclays',
       name: 'Barclays',
       balance: 1500,
-      remaining: 1000,
-      type: 'Current'
+      remaining: 1000
     }]
   }
 });

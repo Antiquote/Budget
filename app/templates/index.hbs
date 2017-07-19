@@ -1,1 +1,28 @@
+{{navigation-bar pageTitle=pageTitle}}
+
 {{outlet}}
+
+    <div class="header account-header">Current accounts</div>
+    
+    <ul class="list account-list">
+
+{{#each model as |account|}}
+      <li>
+        <a href="#">
+          <div class="row account-row">
+            <div class="row-icon"></div>
+            <div style="flex: 1 1 auto; line-height: 1.2; padding-top: 14px; position: relative;">
+              <span class="account-name text-primary text-medium">{{account.name}}</span>
+              <span class="text-secondary text-small" style="display: block;">£{{account.remaining}} remaining</span>
+              <span class="account-value text-primary text-medium">£{{account.balance}}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+{{/each}}
+
+    </ul>
+      
+    <div class="add-row text-hilight text-medium">
+      <a href="#">Add account</a>
+    </div>
